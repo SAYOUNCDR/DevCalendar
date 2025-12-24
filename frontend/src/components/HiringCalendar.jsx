@@ -21,21 +21,21 @@ const HiringCalendar = ({ companies }) => {
   return (
     <div className="space-y-8">
       {/* Filters */}
-      <div className="flex flex-col md:flex-row gap-4">
+      <div className="flex flex-col md:flex-row gap-4 mb-6">
         <div className="relative flex-1">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400" size={18} />
           <input 
             type="text"
             placeholder="Search companies (e.g. Google, Product)..."
-            className="w-full bg-white border border-gray-200 rounded-xl py-3 pl-10 pr-4 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-200 focus:border-slate-400 transition-all shadow-sm"
+            className="w-full bg-white border border-gray-200 rounded-xl py-2.5 pl-9 pr-4 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-orange-100 focus:border-[#F48120] transition-all shadow-sm"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
         </div>
         
-        <div className="relative">
+        <div className="relative w-full md:w-56">
           <select 
-            className="appearance-none bg-white border border-gray-200 rounded-xl px-4 py-3 pr-10 text-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-200 focus:border-slate-400 shadow-sm transition-all cursor-pointer min-w-[160px]"
+            className="w-full appearance-none bg-white border border-gray-200 rounded-xl px-4 py-2.5 pr-10 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-orange-100 focus:border-[#F48120] shadow-sm transition-all cursor-pointer"
             value={selectedMonth}
             onChange={(e) => setSelectedMonth(e.target.value)}
           >
@@ -44,7 +44,7 @@ const HiringCalendar = ({ companies }) => {
               <option key={m} value={m}>{m}</option>
             ))}
           </select>
-          <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 pointer-events-none" size={16} />
+          <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 pointer-events-none" size={14} />
         </div>
       </div>
 
@@ -56,16 +56,16 @@ const HiringCalendar = ({ companies }) => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.2 }}
-            className="bg-white border border-gray-200 rounded-2xl p-6 hover:border-blue-300 hover:shadow-lg hover:shadow-blue-500/5 transition-all"
+            className="bg-white border border-gray-200 rounded-2xl p-6 hover:border-[#F48120]/30 hover:shadow-lg hover:shadow-orange-500/5 transition-all"
           >
             <div className="flex items-center justify-between mb-4">
-              <div className="p-2 bg-blue-50 rounded-lg">
-                <Building2 className="text-blue-600" size={20} />
+              <div className="p-2 bg-orange-50 rounded-lg">
+                <Building2 className="text-[#F48120]" size={20} />
               </div>
               <span className={`text-xs px-2 py-1 rounded border font-semibold ${
                 company.category === 'Product' 
                   ? 'bg-orange-50 border-orange-100 text-orange-600' 
-                  : 'bg-indigo-50 border-indigo-100 text-indigo-600'
+                  : 'bg-slate-50 border-slate-200 text-slate-600'
               }`}>
                 {company.category}
               </span>
@@ -91,7 +91,7 @@ const HiringCalendar = ({ companies }) => {
                 <div className="flex flex-wrap gap-2 mt-1">
                   {company.hiring_months.map((m, i) => (
                     <span key={i} className={`text-xs px-2 py-1 rounded font-medium ${
-                      selectedMonth === m ? 'bg-blue-600 text-white shadow-sm' : 'bg-gray-50 text-slate-600 border border-gray-100'
+                      selectedMonth === m ? 'bg-[#F48120] text-white shadow-sm' : 'bg-gray-50 text-slate-600 border border-gray-100'
                     }`}>
                       {m}
                     </span>

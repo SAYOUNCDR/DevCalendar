@@ -30,12 +30,20 @@ function App() {
 
       <main className="pt-28 pb-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         {/* Header Section */}
-        <div className="text-center mb-10">
-          <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-3 tracking-tighter">
-            Crack Your Dream Career
+        <div className="text-center mb-12 relative z-10">
+          <div className="inline-flex items-center gap-1 bg-white border border-[#F48115]/30 rounded-lg p-1.5 px-4 mb-8 shadow-sm hover:shadow-md transition-all cursor-pointer group">
+            <span className="text-[#F48120] font-bold text-sm tracking-wide">Backed by</span>
+            <span className="h-6 px-2 bg-[#F48120] rounded flex items-center justify-center text-white font-bold text-sm ml-1 tracking-widest">N o</span>
+            <span className="text-[#F48120] font-bold text-sm tracking-wide">ne</span>
+          </div>
+          
+          <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 tracking-tight leading-1.1">
+            Crack Your 
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F48120] to-[#faad14]"> Dream Career</span>
           </h1>
-          <p className="text-slate-500 text-base max-w-2xl mx-auto font-medium">
-            One-stop tracking for top Open Source Programs, Hackathons, and Premium Company Hiring Cycles in India.
+          
+          <p className="text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed text-balance font-medium">
+            Your daily-updated intelligence feed for top <span className="text-slate-900 font-bold decoration-[#F48120]/30 underline underline-offset-4 decoration-2">Open Source Programs</span>, <span className="text-slate-900 font-bold decoration-[#F48120]/30 underline underline-offset-4 decoration-2">Hackathons</span>, and <span className="text-slate-900 font-bold decoration-[#F48120]/30 underline underline-offset-4 decoration-2">Hiring Cycles</span>.
           </p>
         </div>
 
@@ -44,10 +52,10 @@ function App() {
           <div className="bg-white p-1 rounded-xl border border-gray-200 shadow-sm flex space-x-1">
             <button
               onClick={() => setActiveTab('hackathons')}
-              className={`cursor-pointer flex items-center px-5 py-2 rounded-lg text-xs font-semibold transition-all duration-200 ${
+              className={`cursor-pointer flex items-center px-5 py-2 rounded-lg text-xs font-bold transition-all duration-200 ${
                 activeTab === 'hackathons'
                   ? 'bg-slate-900 text-white shadow-md'
-                  : 'text-slate-500 hover:text-slate-900 hover:bg-gray-50'
+                  : 'text-slate-500 hover:text-slate-900 hover:bg-orange-50'
               }`}
             >
               <Code2 className="mr-2 w-3.5 h-3.5" />
@@ -55,10 +63,10 @@ function App() {
             </button>
             <button
               onClick={() => setActiveTab('hiring')}
-              className={`cursor-pointer flex items-center px-5 py-2 rounded-lg text-xs font-semibold transition-all duration-200 ${
+              className={`cursor-pointer flex items-center px-5 py-2 rounded-lg text-xs font-bold transition-all duration-200 ${
                 activeTab === 'hiring'
-                  ? 'bg-blue-600 text-white shadow-md shadow-blue-500/20'
-                  : 'text-slate-500 hover:text-slate-900 hover:bg-gray-50'
+                  ? 'bg-[#F48120] text-white shadow-md shadow-orange-500/20'
+                  : 'text-slate-500 hover:text-slate-900 hover:bg-orange-50'
               }`}
             >
               <Briefcase className="mr-2 w-3.5 h-3.5" />
@@ -83,14 +91,14 @@ function App() {
                     <input
                       type="text"
                       placeholder="Search programs..."
-                      className="w-full pl-9 pr-4 py-2.5 bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-200 focus:border-slate-400 text-sm text-slate-900 placeholder-slate-400 shadow-sm transition-all"
+                      className="w-full pl-9 pr-4 py-2.5 bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-100 focus:border-[#F48120] text-sm text-slate-900 placeholder-slate-400 shadow-sm transition-all"
                       value={ossSearch}
                       onChange={(e) => setOssSearch(e.target.value)}
                     />
                   </div>
                   <div className="relative w-full md:w-56">
                     <select
-                      className="w-full appearance-none bg-white border border-gray-200 rounded-xl px-4 py-2.5 pr-10 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-200 focus:border-slate-400 shadow-sm transition-all cursor-pointer"
+                      className="w-full appearance-none bg-white border border-gray-200 rounded-xl px-4 py-2.5 pr-10 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-orange-100 focus:border-[#F48120] shadow-sm transition-all cursor-pointer"
                       value={ossType}
                       onChange={(e) => setOssType(e.target.value)}
                     >
