@@ -8,23 +8,25 @@ One-stop tracking for top Open Source Programs, Hackathons, and Premium Company 
 
 ## 🚀 Overview
 
-DevCalendar is a MERN stack application designed to help students and professionals keep track of critical opportunities in the tech ecosystem. It features a curated list of:
+## 🚀 Overview
+
+DevCalendar is a modern frontend application designed to help students and professionals keep track of critical opportunities in the tech ecosystem. It features a curated list of:
 - **Open Source Programs** (GSoC, LFX, Outreachy, etc.)
 - **Hackathons** (SIH, HackIndia, etc.)
 - **Hiring Calendars** for top product and service-based companies.
 
 ## ✨ Features
 
-- **Comprehensive Database**: Detailed timelines for 50+ programs and companies.
+- **Comprehensive Database**: Detailed timelines for 50+ programs and companies (Static Data).
 - **Classic & Clean UI**: A premium, light-themed interface built with Tailwind CSS.
 - **Filtering**: Easily filter opportunities by type, month, or search by name.
 - **Responsive Design**: Optimized for all devices.
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React (Vite), Tailwind CSS, Framer Motion, Lucide React.
-- **Backend**: Node.js, Express.js.
-- **Database**: MongoDB.
+- **Framework**: React (Vite)
+- **Styling**: Tailwind CSS, Framer Motion, Lucide React
+- **Data**: Static JSON (`src/data.js`)
 
 ## ⚙️ Installation & Setup
 
@@ -32,7 +34,6 @@ Follow these steps to set up the project locally.
 
 ### Prerequisites
 - Node.js (v18+)
-- MongoDB (running locally or via Atlas)
 
 ### 1. Clone the repository
 ```bash
@@ -40,28 +41,15 @@ git clone https://github.com/SAYOUNCDR/DevCalendar.git
 cd DevCalendar
 ```
 
-### 2. Backend Setup
+### 2. Install & Run
 ```bash
-cd backend
-npm install
-
-# Connect to MongoDB (Update config if necessary)
-# Run the seed script to populate data
-npm run seed
-
-# Start the server
-npm start
-```
-*Server runs on port 5000 by default.*
-
-### 3. Frontend Setup
-```bash
-cd ../frontend
+cd frontend
 npm install
 
 # Start the development server
 npm run dev
 ```
+*Frontend runs on http://localhost:5173.*
 *Frontend runs on http://localhost:5173.*
 
 ## 🤝 Contributing

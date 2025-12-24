@@ -24,7 +24,7 @@ git checkout -b fix/critical-bug
 ```
 
 ### 4. Make Changes
-- **Data Updates**: Edit `backend/seed/data.js` to add new programs or fix timelines.
+- **Data Updates**: Edit `frontend/src/data.js` to add new programs or fix timelines.
 - **UI Changes**: Modify components in `frontend/src/components`.
 - Ensure your code follows the existing style (clean, modular).
 

@@ -1,33 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import ProgramCard from './components/ProgramCard';
 import HiringCalendar from './components/HiringCalendar';
 import { Code2, Briefcase } from 'lucide-react';
+import { programs, companies } from './data';
 
 function App() {
   const [activeTab, setActiveTab] = useState('hackathons');
-  const [programs, setPrograms] = useState([]);
-  const [companies, setCompanies] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const [programsRes, companiesRes] = await Promise.all([
-          axios.get('http://localhost:5000/api/programs'),
-          axios.get('http://localhost:5000/api/companies'),
-        ]);
-        setPrograms(programsRes.data);
-        setCompanies(companiesRes.data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchData();
-  }, []);
+  // Removed loading state and data fetching since we use static data now
+  const loading = false;
 
   return (
     <div className="min-h-screen bg-gray-50 text-slate-900 selection:bg-blue-500/30">

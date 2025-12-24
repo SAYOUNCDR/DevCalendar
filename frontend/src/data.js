@@ -1,5 +1,4 @@
-const programs = [
-  // Original programs
+export const programs = [
   {
     name: "Google Summer of Code (GSoC)",
     type: "Open Source",
@@ -160,8 +159,6 @@ const programs = [
     description: "Student-Industry engagement program. Students work on R&D projects (worklets) with Samsung engineers. Certificates & rewards.",
     link: "https://www.samsungprism.com/"
   },
-
-  // NEW ADDITIONS
   {
     name: "Google Girl Hackathon",
     type: "Hiring Challenge",
@@ -364,8 +361,7 @@ const programs = [
   }
 ];
 
-const companies = [
-  // Original companies
+export const companies = [
   {
     name: "Goldman Sachs",
     category: "Product",
@@ -506,8 +502,6 @@ const companies = [
     roles: ["Software Developer"],
     description: "Zoho Schools 'Zestober' challenge in Oct. Examless evaluation/portfolio submission route available."
   },
-
-  // NEW ADDITIONS
   {
     name: "Wipro",
     category: "Service",
@@ -887,5 +881,3 @@ const companies = [
     description: "Product engineering services. Work on global products. Strong technical culture."
   }
 ];
-
-module.exports = { programs, companies };
