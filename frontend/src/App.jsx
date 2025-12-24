@@ -121,7 +121,7 @@ function App() {
       </main>
 
       <footer className="border-t border-gray-200 py-8 text-center text-slate-500 text-sm">
-        <p>© {new Date().getFullYear()} DevCalendar. Made with ❤️ by Sayoun Parui.</p>
+        <p>© {new Date().getFullYear()} DevCalendar. Made with ❤️ by <a href="https://x.com/DriftNBlde" target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 transition-colors underline decoration-slate-300 underline-offset-4">Sayoun Parui</a>.</p>
       </footer>
     </div>
   );
