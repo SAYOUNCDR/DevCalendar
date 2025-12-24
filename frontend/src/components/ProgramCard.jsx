@@ -10,7 +10,8 @@ const ProgramCard = ({ program, index }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1 }}
-      className="group relative bg-white hover:bg-white border border-gray-200 rounded-2xl p-6 transition-all duration-300 hover:border-[#F48120]/50 hover:shadow-xl hover:shadow-orange-900/5"
+      onClick={() => window.open(program.link, '_blank')}
+      className="group relative bg-white hover:bg-white border border-gray-200 rounded-2xl p-6 transition-all duration-300 hover:border-[#F48120]/50 hover:shadow-xl hover:shadow-orange-900/5 cursor-pointer"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-orange-50 to-amber-50 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-300" />
       
@@ -23,14 +24,9 @@ const ProgramCard = ({ program, index }) => {
           }`}>
             {program.type}
           </span>
-          <a 
-            href={program.link} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-slate-900 transition-colors"
-          >
+          <div className="text-gray-400 group-hover:text-slate-900 transition-colors">
             <ExternalLink size={16} />
-          </a>
+          </div>
         </div>
         
         <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-[#F48120] transition-colors leading-tight">
