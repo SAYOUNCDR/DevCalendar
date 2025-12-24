@@ -25,7 +25,7 @@ function App() {
   const programTypes = ['All', ...new Set(programs.map(p => p.type))];
 
   return (
-    <div className="min-h-screen bg-gray-50 text-slate-900 selection:bg-blue-500/30">
+    <div className="min-h-screen bg-gray-50 text-slate-900">
       <Navbar />
 
       <main className="pt-28 pb-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
@@ -43,7 +43,7 @@ function App() {
           </h1>
           
           <p className="text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed text-balance font-medium">
-            Your daily-updated intelligence feed for top <span className="text-slate-900 font-bold decoration-[#F48120]/30 underline underline-offset-4 decoration-2">Open Source Programs</span>, <span className="text-slate-900 font-bold decoration-[#F48120]/30 underline underline-offset-4 decoration-2">Hackathons</span>, and <span className="text-slate-900 font-bold decoration-[#F48120]/30 underline underline-offset-4 decoration-2">Hiring Cycles</span>.
+            Your curated intelligence feed for top <span className="text-slate-900 font-bold decoration-[#F48120]/30 underline underline-offset-4 decoration-2">Open Source Programs</span>, <span className="text-slate-900 font-bold decoration-[#F48120]/30 underline underline-offset-4 decoration-2">Hackathons</span>, and <span className="text-slate-900 font-bold decoration-[#F48120]/30 underline underline-offset-4 decoration-2">Hiring Cycles</span>.
           </p>
         </div>
 

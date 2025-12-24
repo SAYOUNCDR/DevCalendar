@@ -10,7 +10,7 @@ const Navbar = () => {
             <div className="bg-white p-1.5 rounded-lg shadow-sm border border-orange-100">
               <Terminal className="w-4 h-4 text-[#F48120]" />
             </div>
-            <span className="text-lg font-bold text-slate-900 tracking-tighter">
+            <span className="text-lg font-bold tracking-tighter text-[#F48120]">
               DevCalendar
             </span>
           </div>
