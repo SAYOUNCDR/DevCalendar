@@ -1,17 +1,20 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "Hiring & hackthon calander",
-  "keywords": [
-    "hiring",
-    "hackthon",
-    "oss"
-  ],
+  "description": "",
   "license": "ISC",
-  "author": "Sayoun",
+  "author": "",
   "type": "commonjs",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "mongoose": "^9.0.2",
+    "nodemon": "^3.1.11"
   }
 }
