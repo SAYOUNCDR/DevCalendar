@@ -2,7 +2,7 @@
 
 @layer base {
   body {
-    @apply bg-black text-white font-sans antialiased;
+    @apply bg-gray-50 text-slate-900 font-sans antialiased;
   }
 }
 
@@ -11,8 +11,8 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  @apply bg-zinc-900;
+  @apply bg-gray-100;
 }
 ::-webkit-scrollbar-thumb {
-  @apply bg-zinc-700 rounded-full hover:bg-zinc-600;
+  @apply bg-gray-300 rounded-full hover:bg-gray-400;
 }
