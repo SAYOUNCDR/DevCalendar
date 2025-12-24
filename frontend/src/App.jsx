@@ -36,10 +36,10 @@ function App() {
       <main className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">
-            Crack Your <span className="text-blue-600">Dream Career</span>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tighter">
+            Crack Your Dream Career
           </h1>
-          <p className="text-slate-500 text-lg max-w-2xl mx-auto">
+          <p className="text-slate-500 text-lg max-w-2xl mx-auto font-medium">
             One-stop tracking for top Open Source Programs, Hackathons, and Premium Company Hiring Cycles in India.
           </p>
         </div>
@@ -49,7 +49,7 @@ function App() {
           <div className="bg-white p-1 rounded-xl border border-gray-200 shadow-sm flex space-x-1">
             <button
               onClick={() => setActiveTab('hackathons')}
-              className={`flex items-center px-6 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ${
+              className={`cursor-pointer flex items-center px-6 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 ${
                 activeTab === 'hackathons'
                   ? 'bg-slate-900 text-white shadow-md'
                   : 'text-slate-500 hover:text-slate-900 hover:bg-gray-50'
@@ -60,7 +60,7 @@ function App() {
             </button>
             <button
               onClick={() => setActiveTab('hiring')}
-              className={`flex items-center px-6 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ${
+              className={`cursor-pointer flex items-center px-6 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 ${
                 activeTab === 'hiring'
                   ? 'bg-blue-600 text-white shadow-md shadow-blue-500/20'
                   : 'text-slate-500 hover:text-slate-900 hover:bg-gray-50'
