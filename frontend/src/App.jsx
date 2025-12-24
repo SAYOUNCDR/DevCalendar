@@ -93,7 +93,7 @@ function App() {
       </main>
 
       <footer className="border-t border-white/10 py-8 text-center text-gray-500 text-sm">
-        <p>© {new Date().getFullYear()} DevPath. Built with MERN.</p>
+        <p>© {new Date().getFullYear()} DevCalendar. Made with ❤️ by Sayoun Parui.</p>
       </footer>
     </div>
   );
