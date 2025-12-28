@@ -13,7 +13,7 @@ const ProgramCard = ({ program, index }) => {
       onClick={() => window.open(program.link, '_blank')}
       className="group relative bg-white hover:bg-white border border-gray-200 rounded-2xl p-6 transition-all duration-300 hover:border-[#F48120]/50 hover:shadow-xl hover:shadow-orange-900/5 cursor-pointer"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-50 to-amber-50 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-300" />
+      <div className="absolute inset-0 bg-linear-to-br from-orange-50 to-amber-50 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-300" />
       
       <div className="relative z-10">
         <div className="flex justify-between items-start mb-3">
